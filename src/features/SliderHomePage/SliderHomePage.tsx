@@ -8,10 +8,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import Slide from './component/Slide/Slide'
 
-
 const SliderHomePage = () => {
-
-
 	const arr = [
 		{
 			img: '/HomePage/slider/slide1.png',
@@ -44,7 +41,12 @@ const SliderHomePage = () => {
 	return (
 		<Wrapper>
 			<div className='container'>
-				<Swiper className='home'
+				<WrapperText>
+					<Title>Trending news from Coca</Title>
+					<Text>we have some new Service to pamper you</Text>
+				</WrapperText>
+				<Swiper
+					className='home'
 					modules={[Navigation, A11y]}
 					spaceBetween={32}
 					slidesPerView={2}
@@ -94,4 +96,22 @@ const Circle = styled.div`
 	z-index: 2;
 `
 
+const WrapperText = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	align-items: center;
+	padding-bottom: 80px;
+`
+const Title = styled.h2`
+	font-size: 56px;
+	letter-spacing: -2px;
+	line-height: 120%;
+	font-weight: 700;
+`
+const Text = styled.p`
+	font-size: 18px;
+	line-height: 32px;
+	color: #7e8492;
+`
 export default SliderHomePage

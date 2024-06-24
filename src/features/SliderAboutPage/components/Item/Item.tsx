@@ -10,9 +10,7 @@ const Item = () => {
 };
 
 	const Wrapper = styled.div`
-		
-		width: 502px;
-		height: 630px;
+	
 	`
 
 export default Item;

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled'
 import Image from 'next/image'
 
@@ -7,107 +6,104 @@ const Footer = () => {
 		<Wrapper>
 			<div className='container'>
 				<Container>
-						<WrapperText>
-								<Title>
-								Think beyond the wave
-								</Title>
-								<WrapperSubTitle>
-								<Line>
-								</Line>
-								<SubTitle>
-								Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help
-								</SubTitle>
-								</WrapperSubTitle>
-						</WrapperText>
-						<Circle></Circle>
-						<Btn>Try for free</Btn>
+					<WrapperText>
+						<Title>Think beyond the wave</Title>
+						<WrapperSubTitle>
+							<Line></Line>
+							<SubTitle>
+								Ask about Sans products, pricing, implementation, or anything
+								else. Our highly trained reps are standing by, ready to help
+							</SubTitle>
+						</WrapperSubTitle>
+					</WrapperText>
+					<Circle></Circle>
+					<Btn>Try for free</Btn>
 				</Container>
 				<WrapperNavigation>
 					<WrapperLogo>
-						<Image alt='logo' width={140} height={66} src={'/Logo.svg'}/>
+						<Image alt='logo' width={140} height={66} src={'/Logo.svg'} />
 						<Text>
-						We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs
+							We built an elegant solution. Our team created a fully integrated
+							sales and marketing solution for SMBs
 						</Text>
 					</WrapperLogo>
 					<ContainerNavigation>
-					<WrapperList>
-					<Span >Company</Span>
-					<List>
-							<Item>
-								<a href='#'>About</a>
-							</Item>
-							<Item>
-								<a href='#'>Pricing</a>
-							</Item>
-							<Item>
-								<a href='#'>Jobs</a>
-							</Item>
-							<Item>
-								<a href='#'>Blog</a>
-							</Item>
-						</List>
-					</WrapperList>
-					<WrapperList>
-					<Span >Product</Span>
-					<List>
-							<Item>
-								<a href='#'>Sales Software</a>
-							</Item>
-							<Item>
-								<a href='#'>Marketplace</a>
-							</Item>
-							<Item>
-								<a href='#'>Terms & Conditions</a>
-							</Item>
-							<Item>
-								<a href='#'>Privacy Policy</a>
-							</Item>
-						</List>
-					</WrapperList>
-					<WrapperList>
-					<Span >Discover</Span>
-					<List>
-							<Item>
-								<a href='#'>CRM Comparision</a>
-							</Item>
-							<Item>
-								<a href='#'>Partner Program</a>
-							</Item>
-							<Item>
-								<a href='#'>What is CRM</a>
-							</Item>
-							<Item>
-								<a href='#'>Resource</a>
-							</Item>
-						</List>
-					</WrapperList>
-					<WrapperList>
-					<Span >Help Center</Span>
-					<List>
-							<Item>
-								<a href='#'>Community</a>
-							</Item>
-							<Item>
-								<a href='#'>Knowledge Base</a>
-							</Item>
-							<Item>
-								<a href='#'>Academy</a>
-							</Item>
-							<Item>
-								<a href='#'>Support</a>
-							</Item>
-						</List>
-					</WrapperList>
+						<WrapperList>
+							<Span>Company</Span>
+							<List>
+								<Item>
+									<a href='#'>About</a>
+								</Item>
+								<Item>
+									<a href='#'>Pricing</a>
+								</Item>
+								<Item>
+									<a href='#'>Jobs</a>
+								</Item>
+								<Item>
+									<a href='#'>Blog</a>
+								</Item>
+							</List>
+						</WrapperList>
+						<WrapperList>
+							<Span>Product</Span>
+							<List>
+								<Item>
+									<a href='#'>Sales Software</a>
+								</Item>
+								<Item>
+									<a href='#'>Marketplace</a>
+								</Item>
+								<Item>
+									<a href='#'>Terms & Conditions</a>
+								</Item>
+								<Item>
+									<a href='#'>Privacy Policy</a>
+								</Item>
+							</List>
+						</WrapperList>
+						<WrapperList>
+							<Span>Discover</Span>
+							<List>
+								<Item>
+									<a href='#'>CRM Comparision</a>
+								</Item>
+								<Item>
+									<a href='#'>Partner Program</a>
+								</Item>
+								<Item>
+									<a href='#'>What is CRM</a>
+								</Item>
+								<Item>
+									<a href='#'>Resource</a>
+								</Item>
+							</List>
+						</WrapperList>
+						<WrapperList>
+							<Span>Help Center</Span>
+							<List>
+								<Item>
+									<a href='#'>Community</a>
+								</Item>
+								<Item>
+									<a href='#'>Knowledge Base</a>
+								</Item>
+								<Item>
+									<a href='#'>Academy</a>
+								</Item>
+								<Item>
+									<a href='#'>Support</a>
+								</Item>
+							</List>
+						</WrapperList>
 					</ContainerNavigation>
-				
 				</WrapperNavigation>
 				<LineBottom></LineBottom>
 				<TextBottom>© Copyright 2023 All Rights Reserved</TextBottom>
 			</div>
-		
 		</Wrapper>
-	);
-};
+	)
+}
 
 const Wrapper = styled.div`
 	display: flex;
@@ -122,7 +118,6 @@ const Container = styled.div`
 	align-items: center;
 	position: relative;
 	z-index: 3;
-
 `
 const WrapperText = styled.div`
 	display: flex;
@@ -133,7 +128,7 @@ const Circle = styled.div`
 	width: 621px;
 	height: 621px;
 	border-radius: 50%;
-	background-color: rgba(250, 117,21, 0.13);
+	background-color: rgba(250, 117, 21, 0.13);
 	top: -69px;
 	left: 54px;
 	position: absolute;
@@ -162,13 +157,13 @@ const WrapperSubTitle = styled.div`
 `
 const Btn = styled.button`
 	padding: 16px 32px;
-	background-color: #1D1E25;
+	background-color: #1d1e25;
 	color: #fff;
 	line-height: 24px;
 	font-weight: 600;
 	border-radius: 100px;
 	transition: all 0.3s ease-out;
-	&:hover{
+	&:hover {
 		opacity: 0.9;
 	}
 `
@@ -202,25 +197,21 @@ const List = styled.ul`
 	display: flex;
 	gap: 16px;
 	flex-direction: column;
-
-`	
-const Item = styled.li`
-
 `
+const Item = styled.li``
 const Span = styled.span`
-	font-weight:  500;
+	font-weight: 500;
 	line-height: 24px;
-	
 `
 const LineBottom = styled.div`
 	width: 100%;
-	border-top: 1px solid #CED1D8;
+	border-top: 1px solid #ced1d8;
 	margin-top: 79px;
 `
 const TextBottom = styled.div`
 	display: flex;
 	justify-content: center;
 	margin-top: 46px;
-	color: #AFB3BB;
+	color: #afb3bb;
 `
-export default Footer;
+export default Footer
