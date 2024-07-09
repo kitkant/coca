@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Instagram from './components/UI/Instagram'
 import Linkedin from './components/UI/Linkedin'
 import Twitter from './components/UI/Twitter'
-import Facebook from './components/UI/facebook'
+import Facebook from './components/UI/Facebook'
 
 const BlackFooter = () => {
 	return (
@@ -275,7 +275,7 @@ const Span = styled.span`
 `
 const LineBottom = styled.div`
 	width: 100%;
-	border-top: 1px solid #ced1d8;
+	border-top: 1px solid #606060;
 	margin-top: 56px;
 `
 const WrapperTextBottom = styled.div`

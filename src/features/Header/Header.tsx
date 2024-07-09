@@ -27,13 +27,13 @@ const Header = () => {
 								<Link href='/about'>About</Link>
 							</Item>
 							<Item>
-								<Link href='/'>Blog</Link>
+								<Link href='/blog'>Blog</Link>
 							</Item>
 							<Item>
-								<Link href='/'>Pricing</Link>
+								<Link href='/pricing'>Pricing</Link>
 							</Item>
 							<Item>
-								<Link href='/'>Contact Us</Link>
+								<Link href='/contacts'>Contact Us</Link>
 								<Icon icon="radix-icons:arrow-right" />
 							</Item>
 						</List>
