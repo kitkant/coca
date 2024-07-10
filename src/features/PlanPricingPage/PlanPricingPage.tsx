@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Fragment } from 'react'
+import Accordion from './components/Accordion/Accordion'
 import CardPrice from './components/CardPrice'
 
 const PlanPricingPage = () => {
@@ -29,7 +30,17 @@ const PlanPricingPage = () => {
 							)
 						})}
 					</WrapperCards>
-
+					<WrapperAccordionSection>
+						<WrapperTitleAccordion>
+							<TitleAccordion>Frequently asked questions</TitleAccordion>
+							<SubTitleAccordion>
+								Everything you need to know about the product and billing.
+							</SubTitleAccordion>
+						</WrapperTitleAccordion>
+						<WrapperAccordion>
+							<Accordion />
+						</WrapperAccordion>
+					</WrapperAccordionSection>
 					<OrangeCircle></OrangeCircle>
 					<BlueCircle></BlueCircle>
 				</Container>
@@ -47,7 +58,7 @@ const Container = styled.div`
 	padding-bottom: 122px;
 	display: flex;
 	flex-direction: column;
-	gap: 56px;
+
 	align-items: center;
 	position: relative;
 	z-index: 0;
@@ -83,6 +94,7 @@ const WrapperSwitch = styled.div`
 	gap: 24px;
 	position: relative;
 	z-index: 2;
+	padding-top: 56px;
 `
 const AnnualPricing = styled.span`
 	font-size: 16px;
@@ -116,5 +128,38 @@ const WrapperCards = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	padding-top: 122px;
+	padding-bottom: 77px;
 `
+const WrapperAccordionSection = styled.div`
+	padding-top: 82px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	align-items: center;
+	width: 100%;
+`
+const WrapperAccordion = styled.div`
+	width: 100%;
+`
+const WrapperTitleAccordion = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	align-items: center;
+`
+const TitleAccordion = styled.h2`
+	font-size: 56px;
+	line-height: 120%;
+	letter-spacing: -2px;
+	font-weight: 700;
+`
+const SubTitleAccordion = styled.span`
+	font-size: 18px;
+	line-height: 32px;
+	letter-spacing: 0;
+	color: #7e8492;
+	font-weight: 500;
+`
+
 export default PlanPricingPage

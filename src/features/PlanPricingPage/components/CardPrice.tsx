@@ -115,7 +115,7 @@ const Container = styled.div`
 	position: relative;
 	z-index: 2;
 	padding: 40px 24px;
-	border: 1px solid #7E8492;
+	border: 1px solid #EDEDED;
 	background-color: transparent;
 	transition: all 0.3s ease;
 	border-radius: 16px;
