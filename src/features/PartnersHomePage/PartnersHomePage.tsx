@@ -15,7 +15,7 @@ const PartnersHomePage = () => {
 								<span>+</span>
 							</ContainerCounter>
 							<Text>
-								some big companies that we work with, and trust us very much
+								Some big companies that we work with, and trust us very much
 							</Text>
 						</WrapperCounter>
 						<WrapperPartnersLogo>
