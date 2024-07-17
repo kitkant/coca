@@ -26,7 +26,7 @@ const Header = () => {
 							<Item>
 								<Link href='/about'>About</Link>
 							</Item>
-							<Item>
+							<Item className='disableLink'>
 								<Link href='/blog'>Blog</Link>
 							</Item>
 							<Item>

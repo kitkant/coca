@@ -254,3 +254,8 @@ input:checked + .sliderPricing:before {
 .sliderPricing.roundPricing:before {
 	border-radius: 50%;
 }
+
+.disableLink a{
+	pointer-events: none;
+	color: rgb(172, 172, 185)!important;
+}
