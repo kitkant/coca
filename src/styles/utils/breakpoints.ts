@@ -27,7 +27,6 @@ export const breakpoints: Record<Breakpoint, string> = {
   "5k": "5120px",
 };
 
-
 export const breakpointsArray = Object.entries(breakpoints).sort((a, b) => {
   const aVal = stripUnit(a[1]) as number;
   const bVal: number = stripUnit(b[1]) as number;

@@ -17,14 +17,14 @@ export default function Home() {
 		<div className={'wrapper'}>
 			<Layout>
 				<HomeHero />
-				<HelpClient />
+				{/* <HelpClient />
 				<PassionHomePage />
 				<CountersHomePage />
 				<PartnersHomePage />
 				<AnalyzeHomePage/>
 				<SliderHomePage/>
-				<SliderCustomerHomePage/>
-				<Footer/>
+				<SliderCustomerHomePage/> */}
+				{/* <Footer/> */}
 			</Layout>
 		</div>
 	)

@@ -48,7 +48,6 @@ const HomeHero = () => {
 						/>
 					</ImageContainerStatistic>
 				</WrapperImage>
-				
 			</WrapperContainer>
 		</Wrapper>
 	)
@@ -64,7 +63,6 @@ const WrapperContainer = styled.div`
 	z-index: 1;
 	padding-bottom: 135px;
 	display: flex;
-	justify-content: space-between;
 `
 const Title = styled.h1`
 	font-weight: 700;
