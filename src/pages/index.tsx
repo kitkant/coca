@@ -13,13 +13,14 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-	return (
+
+	return  (
 		<div className={'wrapper'}>
 			<Layout>
 				<HomeHero />
 				<HelpClient />
 				<PassionHomePage />
-				<CountersHomePage />
+				 <CountersHomePage />
 				<PartnersHomePage />
 				<AnalyzeHomePage/>
 				<SliderHomePage/>
@@ -27,5 +28,5 @@ export default function Home() {
 				<Footer/>
 			</Layout>
 		</div>
-	)
+	) 
 }

@@ -1,14 +1,19 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
 import { LetsIconsCheckRing } from './UI/checkMark'
+import { down } from '@/styles/utils/breakpoints'
+import useScreenSize from '@/hooks/useScreenSize'
 
 const PassionHomePage = () => {
+
+	const screen = useScreenSize()
+
 	return (
 		<Wrapper>
 			<div className='container'>
 				<Container>
 					<WrapperImg>
-							<Image src={'/HomePage/passion.png'} width={585} height={651} alt='img'/>
+							<Image src={'/HomePage/passion.png'} width={screen.width < 1440 ? 560 : 585} height={651} alt='img'/>
 							<WrapperMarkImg>
 								<Image src={'/HomePage/BarChart.svg'} width={290} height={298} alt='img' />
 							</WrapperMarkImg>
@@ -92,12 +97,22 @@ const Title = styled.h3`
 	letter-spacing: -2px;
 	line-height: 120%;
 	font-weight: 700;
+	${down('xlg')}{					
+		font-size: 48px;
+		max-width: 450px;
+}
 `
 const SubTitle = styled.p`
 	color: #7E8492;
 	font-size: 18px;
 	line-height: 32px;
 	max-width: 345px;
+		${down('xlg')}{					
+		font-size: 16px;
+		line-height: 28px;
+			max-width: 300px;
+
+}
 `
 const ContainerMark = styled.div`
 	display: flex;
@@ -109,5 +124,10 @@ const Mark = styled.p`
 	line-height: 32px;
 	font-weight: 500;
 	max-width: 330px;
+		${down('xlg')}{					
+		font-size: 16px;
+		line-height: 28px;
+			max-width: 290px;
+}
 `
 export default PassionHomePage

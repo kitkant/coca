@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
+import { down } from '@/styles/utils/breakpoints'
 
 interface Props {
 	img: string
@@ -50,5 +51,9 @@ const Title = styled.h3`
 	line-height: 150%;
 	font-weight: 700;
 	cursor: pointer;
+				${down('xlg')}{					
+		font-size: 28px;
+
+}
 `
 export default Slide

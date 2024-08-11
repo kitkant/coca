@@ -4,6 +4,7 @@ import Items from './component/Item/Items'
 import { Smile } from './UI/Smile'
 import { ArrowAnalyze } from './UI/ArrowAnalyze'
 import { Group } from './UI/Group'
+import { down } from '@/styles/utils/breakpoints'
 import { Dashboard } from './UI/Dashboard'
 
 const AnalyzeHomePage = () => {
@@ -80,12 +81,21 @@ const Title = styled.h2`
 	line-height: 120%;
 	letter-spacing: -2px;
 	font-weight: 700;
+		${down('xlg')}{					
+		font-size: 48px;
+		max-width: 550px;
+}
 `
 const SubTitle = styled.p`
 	font-size: 18px;
 	line-height: 32px;
 	color:#7E8492;
 	max-width: 410px;
+		${down('xlg')}{					
+		font-size: 16px;
+    line-height: 28px;
+		max-width: 380px;
+}
 `
 const WrapperGrid = styled.div`
 	display: grid;

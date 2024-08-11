@@ -1,7 +1,14 @@
+import useScreenSize from '@/hooks/useScreenSize'
+import { down } from '@/styles/utils/breakpoints'
 import styled from '@emotion/styled'
 import Image from 'next/image'
 
+
+
 const HomeHero = () => {
+
+	const screen = useScreenSize()
+
 	return (
 		<Wrapper>
 			<WrapperContainer className='container'>
@@ -25,7 +32,7 @@ const HomeHero = () => {
 					<ImageContainerGrowth>
 						<Image
 							alt='img'
-							width={213.21}
+							width={screen.width < 1440 ? 200 : 213.21}
 							height={220.63}
 							src={'HomePage/CustomerGrowthLight.svg'}
 						/>
@@ -34,7 +41,7 @@ const HomeHero = () => {
 					<ImageContainerSales>
 						<Image
 							alt='img'
-							width={419}
+							width={screen.width < 1440 ? 400 : 419}
 							height={346}
 							src={'/HomePage/SalesLight.svg'}
 						/>
@@ -42,7 +49,7 @@ const HomeHero = () => {
 					<ImageContainerStatistic>
 						<Image
 							alt='img'
-							width={419}
+							width={screen.width < 1440 ? 400 : 419}
 							height={119}
 							src={'/HomePage/StatisticLight.svg'}
 						/>
@@ -72,6 +79,9 @@ const Title = styled.h1`
 	z-index: 2;
 	letter-spacing: -3.2px;
 	line-height: 115%;
+	${down('xlg')}{					
+			font-size: 75px;
+	}
 `
 const OrangeCircle = styled.div`
 	filter: blur(180px);
@@ -114,10 +124,17 @@ const SubTitle = styled.div`
 	letter-spacing: -1px;
 	line-height: 42px;
 	max-width: 500px;
+	${down('xlg')}{					
+		font-size: 29px;
+		max-width: 450px;
+}
 `
 const HeroContainer = styled.div`
 	position: relative;
 	z-index: 2;
+	${down('xlg')}{					
+		max-width: 550px;
+	}
 `
 const WrapperInput = styled.div`
 	padding-top: 70px;
@@ -162,6 +179,7 @@ const ImageContainerGrowth = styled.div`
 	right: -67px;
 	top: 26px;
 	filter: drop-shadow(20px 40px 24px rgba(45,51,81, 0.12));
+
 `
 const ImageContainerSales = styled.div`
 	position: absolute;
@@ -169,6 +187,9 @@ const ImageContainerSales = styled.div`
 	right: 61px;
 	top: 76px;
 	filter: drop-shadow(20px 40px 24px rgba(45,51,81, 0.12));
+	${down('xlg')}{					
+		top: 70px;
+}
 ` 
 const ImageContainerStatistic = styled.div`
 	position: absolute;
@@ -176,6 +197,9 @@ const ImageContainerStatistic = styled.div`
 	right: 61px;
 	top: 438px;
 	filter: drop-shadow(20px 40px 24px rgba(45,51,81, 0.12));
+		${down('xlg')}{					
+		top: 425px;
+}
 `
 
 export default HomeHero

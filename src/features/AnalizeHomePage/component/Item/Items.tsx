@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled'
 import Image from 'next/image'
+import { down } from '@/styles/utils/breakpoints'
 
 interface Props{
 	image: any
@@ -61,9 +62,17 @@ const Title = styled.h3`
 	line-height: 42px;
 	font-weight: 700;
 	max-width: 256px;
+		${down('xlg')}{					
+		font-size: 28px;
+		line-height: 38px;
+		max-width: 225px;
+}
 `
 const SubTitle = styled.p`
 	line-height: 26px;
 	color: #7E8492;
+		${down('xlg')}{					
+		line-height: 24px;
+}
 `
 export default Items;

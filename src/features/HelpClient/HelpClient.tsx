@@ -4,8 +4,11 @@ import { ShieldCheck } from './UI/ShieldCheck'
 import { TabletCheck } from './UI/TabletCheck'
 import { TabletTasks } from './UI/TabletTasks'
 import Item from './component/Item/Item'
+import useScreenSize from '@/hooks/useScreenSize'
+import { down } from '@/styles/utils/breakpoints'
 
 const HelpClient = () => {
+	const screen = useScreenSize()
 	const items = [
 		{
 			icon: HeroiconsOutlineCalendar,
@@ -71,6 +74,7 @@ const HelpClient = () => {
 									title={item.title}
 									subTitle={item.subTitle}
 									className={itemClass}
+									size={screen.width < 1440 ? '36px' : '40px'}
 								/>
 							)
 						})}
@@ -101,6 +105,9 @@ const Title = styled.h1`
 	line-height: 120%;
 	font-weight: 600;
 	max-width: 700px;
+	${down('xlg')}{					
+		font-size: 48px;
+}
 `
 const SubTitle = styled.p`
 	max-width: 600px;

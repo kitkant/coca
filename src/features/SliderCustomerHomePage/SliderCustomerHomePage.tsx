@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { A11y, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { down } from '@/styles/utils/breakpoints'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -95,12 +96,19 @@ const Title = styled.h3`
 	letter-spacing: -2px;
 	line-height: 120%;
 	font-weight: 700;
+				${down('xlg')}{					
+		font-size: 48px;
+}
 `
 const SubTitle = styled.p`
 	color: #7e8492;
 	font-size: 18px;
 	line-height: 32px;
 	max-width: 340px;
+			${down('xlg')}{					
+		font-size: 16px;
+    line-height: 28px;
+}
 `
 const WrapperSlides = styled.div`
 	position: relative;

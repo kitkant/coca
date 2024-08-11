@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { A11y, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { down } from '@/styles/utils/breakpoints'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -108,6 +109,10 @@ const Title = styled.h2`
 	letter-spacing: -2px;
 	line-height: 120%;
 	font-weight: 700;
+			${down('xlg')}{					
+		font-size: 48px;
+
+}
 `
 const Text = styled.p`
 	font-size: 18px;

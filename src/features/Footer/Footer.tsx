@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
+import { down } from '@/styles/utils/breakpoints'
 
 const Footer = () => {
 	return (
@@ -139,12 +140,18 @@ const Title = styled.h3`
 	font-size: 64px;
 	line-height: 120%;
 	font-weight: 700;
+			${down('xlg')}{					
+		font-size: 60px;
+}
 `
 const SubTitle = styled.p`
 	font-size: 24px;
 	line-height: 34px;
 	font-weight: 700;
 	max-width: 553px;
+		${down('xlg')}{					
+		font-size: 20px;
+}
 `
 const Line = styled.div`
 	width: 76px;

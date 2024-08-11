@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from '@emotion/styled'
+import { down } from '@/styles/utils/breakpoints'
 
 interface IProps{
 	Icon: any
 	title: string
 	subTitle: string
 	className: string | undefined
+	size: string
 }
 
-const Item = ({Icon, title, subTitle, className} : IProps)  => {
+const Item = ({Icon, title, subTitle, className, size} : IProps)  => {
 	return (
 		<Wrapper className={className}>
-			<Icon/>
+			<Icon size={size}/>
 			<Title>
 				{title}
 			</Title>
@@ -38,6 +40,9 @@ const Wrapper = styled.div`
 	&.div4{
 		grid-area: 4 / 4 / 6 / 6;
 	}
+			${down('xlg')}{					
+			gap: 20px;
+	}
 `
 const Title = styled.h3`
 	max-width: 249px;
@@ -47,6 +52,9 @@ const Title = styled.h3`
 	font-weight: 600;
 	color: #fff;
 	white-space: pre-line;
+		${down('xlg')}{					
+			font-size: 28px;
+	}
 `
 const SubTitle = styled.p`
 	max-width: 446px;

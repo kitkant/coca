@@ -1,6 +1,8 @@
 import Counter from '@/compoents/Counter'
 import styled from '@emotion/styled'
 import Image from 'next/image'
+import { down } from '@/styles/utils/breakpoints'
+
 
 const CountersHomePage = () => {
 	return (
@@ -90,11 +92,18 @@ const WrapperNumber = styled.div`
 	font-size: 64px;
 	line-height: 120%;
 	font-weight: 700;
+	${down('xlg')}{					
+		font-size: 56px;
+}
 `
 const Text = styled.p`
 	font-size: 18px;
 	line-height: 32px;
 	color: #7E8492;
+	${down('xlg')}{					
+		line-height: 28px;
+
+}
 `
 const Line = styled.div`
 	height: 99px;
@@ -110,11 +119,19 @@ const Title = styled.h2`
 	letter-spacing: -2px;
 	font-weight: 600;
 	max-width: 700px;
+	${down('xlg')}{					
+		font-size: 48px;
+			max-width: 500px;
+}
 `
 const SubTitle = styled.p`
 	color: #7E8492;
 	font-size: 18px;
 	line-height: 32px;
 	max-width: 421px;
+	${down('xlg')}{					
+		font-size: 16px;
+		line-height: 28px;
+}
 `
 export default CountersHomePage

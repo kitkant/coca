@@ -1,5 +1,6 @@
 import Counter from '@/compoents/Counter'
 import styled from '@emotion/styled'
+import { down } from '@/styles/utils/breakpoints'
 import Image from 'next/image'
 
 const PartnersHomePage = () => {
@@ -92,6 +93,10 @@ const Text = styled.p`
 	font-weight: medium;
 	color: #7e8492;
 	max-width: 300px;
+		${down('xlg')}{					
+		font-size: 16px;
+    line-height: 28px;
+}
 `
 const WrapperPartnersLogo = styled.div`
 	display: flex;
