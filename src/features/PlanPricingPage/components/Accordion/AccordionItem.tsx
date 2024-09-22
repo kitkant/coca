@@ -2,6 +2,7 @@ import React, { MouseEventHandler, MutableRefObject, useRef, useState } from 're
 import styled from '@emotion/styled'
 import Plus from '../UI/Plus'
 import Minus from '../UI/Minus'
+import { css, keyframes } from '@emotion/react'
 
 
 interface IProps{
@@ -11,13 +12,16 @@ interface IProps{
 	onClick: MouseEventHandler
 }
 
+
+
 const AccordionItem = ({ question, answer, isOpen, onClick } : IProps) => {
 	const contentHeight = useRef() as MutableRefObject<HTMLInputElement>
 	 return(
 		 <Wrapper >
 		 <WrapperQuestion className={`question-container ${isOpen ? 'active' : ''}`}   onClick={onClick}>
 			<Question className='question-content'>{question}</Question>
-			{isOpen ? <Minus/> : <Plus/>}
+			{/* {isOpen ? <Minus/> : <Plus/>} */}
+			<WrapperPlus className={isOpen ? 'active' : ''}><Plus/></WrapperPlus>
 		 </WrapperQuestion>
  
 			<AnswerContainer ref={contentHeight} className="answer-container" style={
@@ -30,7 +34,14 @@ const AccordionItem = ({ question, answer, isOpen, onClick } : IProps) => {
 		</Wrapper>
 	 )
  }
-
+	const WrapperPlus = styled.div`
+ 		hight: 24px;
+		width: 24px;
+		transition: 1s;
+		&.active{
+		transform: rotate(45deg);
+		}
+	`
  const Wrapper = styled.div`
  		border-bottom: 1px solid #EDEDED;
 		padding-top: 56px;
